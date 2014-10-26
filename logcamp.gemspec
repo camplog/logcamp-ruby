@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Logcamp::VERSION
   spec.authors       = ["Olivier"]
   spec.email         = ["olivier@yafoy.com"]
-  spec.summary       = %q{Gem to send events notification to logcamp central app.}
-  spec.description   = ""
-  spec.homepage      = ""
+  spec.summary       = %q{Gem to send app-generated event notifications to logcamp master application}
+  spec.description   = "Aggregate app notifications in one place. Search events and share access"
+  spec.homepage      = "https://github.com/camplog/logcamp-ruby"
   spec.license       = "MIT"
 
   spec.files         = Dir['LICENSE.md', 'README.md', 'lib/**/*']
@@ -24,6 +24,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency("json", "~> 1.8.1")
 
   spec.add_development_dependency("shoulda", "~> 3.4.0")
-  spec.add_development_dependency("test-unit")
-  spec.add_development_dependency("minitest")
+  spec.add_development_dependency("test-unit", "~> 3.0.0")
+  spec.add_development_dependency("minitest", "~> 5.4.0")
 end
