@@ -42,7 +42,9 @@ module Logcamp
     end
 
     if !params[:metadata].nil? && params[:metadata].class != Hash
-      raise InvalidMetadataError.new("Invalid metadata", params)
+      raise InvalidMetadataError.new("Invalid metadata. Only key value pair is supported", params)
+    else
+      params[:metadata] = params[:metadata].to_json
     end
 
     url = api_url(url)
@@ -52,9 +54,9 @@ module Logcamp
       uri = URI(url)
       request = Net::HTTP::Post.new(uri) if method == :post
 
-      request["User-Agent"] = "Logcamp-ruby gem"
+      request["User-Agent"]    = "Logcamp-ruby gem"
       request["Authorization"] = "Token token=\"#{token}\""
-      request["Content-Type"] = "application/json"
+      request["Content-Type"]  = "application/json"
       request.body = params.to_json
 
       http = Net::HTTP.new(uri.hostname, uri.port)
@@ -91,14 +93,13 @@ module Logcamp
   def self.handle_connection_error(e)
     case e
       when SocketError
-        message = "Unexpected error when trying to connect to Logcamp."
-
+        message = "Unexpected error when trying to connect to Logcamp"
       when NoMethodError
         message = "Unexpected HTTP response code"
       when InvalidMetadataError
-        message = "Invalid metadata. Accepts only key value pair"
+        message = "Invalid metadata. Only key value pair is supported"
       else
-        message = "Unexpected error communicating with Logcamp."
+        message = "Unexpected error communicating with Logcamp"
     end
 
     raise APIConnectionError.new(message + "\n\n(Network error: #{e.message})")

@@ -30,16 +30,13 @@ Logcamp.token = ENV['LOGCAMP_TOKEN']
 
 ```ruby
 Logcamp::Event.create(
-  date: Time.now,
-  currency: 'cad',
-  client_email: 'client@email.com',
-  amount: '15',
-  total_price: '15',
-  city: 'Nancy',
-  country: 'France',
-  shipping: 0,
-  uid: SecureRandom.hex(4),
-  source: 'Stripe payment form'
+  status: 'event status',
+  message: 'notification message',
+  alert: true,
+  metadata: {
+    key1: value1,
+    key2: value2
+  }
 )
 ```
 
