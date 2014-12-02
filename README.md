@@ -1,8 +1,8 @@
-# Logcamp::Ruby
+# Logcamp
 
 [![Build Status](https://semaphoreapp.com/api/v1/projects/0d7ed887-f4de-410c-a678-eb47c9c66aa8/275246/shields_badge.svg)](https://semaphoreapp.com/olimart/logcamp-ruby)
 
-Simple gem for communicating with external API. Heavily inspired by stripe gem.
+Simple ruby gem for communicating with external API. Heavily inspired by stripe gem.
 
 ## Installation
 
@@ -20,7 +20,9 @@ Or install it yourself as:
 
 ## Usage
 
-In your app
+1. Sign up and create an app.
+
+In your project, initialize your app.
 
 1. Set token
 
