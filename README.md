@@ -20,17 +20,17 @@ Or install it yourself as:
 
 ## Usage
 
-1. Sign up and create an app.
+1) Sign up and create an app.
 
 In your project, initialize your app.
 
-1. Set token
+2) Set token
 
 ```ruby
 Logcamp.token = ENV['LOGCAMP_TOKEN']
 ```
 
-2. Send event
+3) Send event
 
 ```ruby
 Logcamp::Event.create(
@@ -45,7 +45,6 @@ Logcamp::Event.create(
 ```
 
 **For Sinatra app** you may need to add `require 'bundler/setup'`
-
 
 ## Tests
 
