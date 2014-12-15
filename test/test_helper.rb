@@ -1,14 +1,15 @@
-require "logcamp"
-require "test/unit"
-require "shoulda"
+require 'logcamp'
+require 'test/unit'
+require 'minitest/autorun'
+require 'minitest/pride'
+require 'shoulda'
 
-class Test::Unit::TestCase
-
-  setup do
+class Setup
+  def setup
     Logcamp.token = "111"
   end
 
-  teardown do
+  def teardown
     Logcamp.token = nil
   end
 end

@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'logcamp/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "logcamp-ruby"
+  spec.name          = "logcamp"
   spec.version       = Logcamp::VERSION
   spec.authors       = ["Olivier"]
   spec.email         = ["olivier@yafoy.com"]

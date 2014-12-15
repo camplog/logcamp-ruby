@@ -8,7 +8,7 @@ Simple ruby gem for communicating with external API. Heavily inspired by stripe 
 
 Add this line to your application's Gemfile:
 
-    gem 'logcamp-ruby'
+    gem 'logcamp'
 
 And then execute:
 
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install logcamp-ruby
+    $ gem install logcamp
 
 ## Usage
 
